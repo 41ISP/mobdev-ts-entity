@@ -1,48 +1,46 @@
+export interface IStrapiResponse<T> {
+    data: T
+    meta?: Meta
+}
+
+export interface IMedia {
+    id: number
+    url: string
+    alternativeText?: string
+}
+
 export interface IGame {
-    id: number,
+    id: number
+    documentId: string
     title: string
-}
-
-export interface IStrapiResponse {
-    
-}
-
-export interface Root {
-  data: Daum[]
-  meta: Meta
-}
-
-export interface Daum {
-  id: number
-  documentId: string
-  title: string
-  description: Description[]
-  rating: number
-  price: number
-  genre: string
-  releaseDate: string
-  createdAt: string
-  updatedAt: string
-  publishedAt: string
+    description?: Description[]
+    rating?: number
+    price?: number
+    genre?: string
+    releaseDate?: string
+    createdAt: string
+    updatedAt: string
+    publishedAt: string
+    cover?: IMedia
 }
 
 export interface Description {
-  type: string
-  children: Children[]
+    type: string
+    children: Children[]
 }
 
 export interface Children {
-  text: string
-  type: string
+    text: string
+    type: string
 }
 
 export interface Meta {
-  pagination: Pagination
+    pagination: Pagination
 }
 
 export interface Pagination {
-  page: number
-  pageSize: number
-  pageCount: number
-  total: number
+    page: number
+    pageSize: number
+    pageCount: number
+    total: number
 }
