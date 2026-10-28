@@ -25,6 +25,11 @@ export interface IGame {
     cover?: IMedia
 }
 
+export type TGameInput = Omit<
+    IGame,
+    "id" | "documentId" | "cover" | "createdAt" | "updatedAt" | "publishedAt"
+>
+
 export interface Description {
     type: string
     children: Children[]

@@ -51,7 +51,7 @@ export function GameCard({
             <footer className="card__footer">
                 {price && (
                     <strong className={`${price === 0 ? "free" : ""}`}>
-                        {price === 0 ? "Бесплатно" : price}
+                        {price === 0 ? "Бесплатно" : price} Р
                     </strong>
                 )}
                 <button className="link-btn">Удалить</button>
